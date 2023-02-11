@@ -1,0 +1,411 @@
+/*----------------------- Login Page --------------------*/
+
+.commonBorder {
+  border-radius: 10px;
+  background: linear-gradient(123.64deg, rgba(255, 255, 255, 0) -22.38%, rgba(255, 255, 255, 0.039) 70.38%) !important;
+  position: relative;
+}
+.commonBorder::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  padding: 2px;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.3), transparent, rgba(255, 255, 255, 0.3)) !important;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.mainRow {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(159.02deg, #0f123b 14.25%, #090d2e 56.45%, #020515 86.14%);
+}
+.homeLeft h2 {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 130%;
+  color: #ffffff;
+}
+.homeLeft p {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 130%;
+  color: #ffffff;
+}
+
+.homeLeft {
+  background-image: url('/images/bg.png');
+  background-size: cover;
+  position: relative;
+}
+
+.homeLeftText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.homeRightText {
+  width: 100%;
+  height: 100vh;
+}
+.homeRightImagBox {
+  width: 100%;
+  height: auto;
+}
+.homeRightImage {
+  padding-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login_form_div {
+  width: 65%;
+  height: auto;
+  margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login_form {
+  width: 100%;
+  padding: 10px 30px;
+}
+.inputGroupBox {
+  width: 100%;
+  height: auto;
+}
+.label {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 140%;
+  color: #ffffff;
+}
+.copyRightTextBox {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding-top: 1rem;
+}
+.copyRightText {
+  text-align: center;
+  color: #ffff;
+  margin: 0px;
+}
+.input {
+  padding: 8px;
+  color: #fff;
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 10px;
+  background: linear-gradient(123.64deg, rgba(255, 255, 255, 0) -22.38%, rgba(255, 255, 255, 0.039) 70.38%);
+  backdrop-filter: blur(21px);
+}
+.input:focus {
+  outline: none;
+}
+
+.validationCodeBox {
+  width: auto;
+  border-radius: 10px;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.3), transparent, rgba(255, 255, 255, 0.3)) !important;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  color: #fff;
+}
+
+.validationCode {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 140%;
+  padding-left: 10px;
+  letter-spacing: 0.5em;
+  color: #ffffff;
+  text-align: center;
+}
+
+.basic_button {
+  background: linear-gradient(89.33deg, #0075ff 0.58%, #00d1ff 104.03%);
+  backdrop-filter: blur(60px);
+  border-radius: 12px;
+  backdrop-filter: blur(120px);
+  height: 45px;
+  color: white;
+}
+
+/* for switch*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 18px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+.inputBoxSwitch {
+  width: 100%;
+  padding-top: 10px;
+}
+.span {
+  color: #ffff;
+  font-family: 'Plus Jakarta Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  padding-left: 10px;
+}
+.captchaText {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #a0aec0;
+  padding-left: 1rem;
+}
+.haveAccount {
+  padding-top: 0.5rem;
+  text-align: center;
+}
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/* styles for LOGIN CODE PAGE*/
+.login_code_form_div {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+  width: 90%;
+  padding-bottom: 2rem;
+  height: auto;
+}
+.login_code_form {
+  width: 100%;
+  padding: 10px 30px;
+}
+.login_code_title {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 130%;
+  color: #ffffff;
+  text-align: center;
+  padding-bottom: 2em;
+  padding-top: 2.5rem;
+}
+.login_code_please_enter {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 140%;
+  color: #ffffff;
+  text-align: left;
+}
+.login_code_input_box_row {
+  width: 80%;
+  margin-top: 1rem;
+  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login_code_inputbox {
+  border-radius: 6px;
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(123.64deg, rgba(255, 255, 255, 0) -22.38%, rgba(255, 255, 255, 0.039) 70.38%) !important;
+  position: relative;
+}
+
+.login_code_inputbox_div {
+  margin: auto;
+  padding: 0px;
+  width: 25px;
+  height: 25px;
+  border-radius: 6px;
+  background: linear-gradient(123.64deg, rgba(255, 255, 255, 0) -22.38%, rgba(255, 255, 255, 0.039) 70.38%) !important;
+  position: relative;
+}
+.login_code_inputbox_div::after {
+  width: 25px;
+  height: 25px;
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  padding: 02px;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.3), transparent, rgba(255, 255, 255, 0.3)) !important;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  margin: 0px;
+}
+.login_code_inputbox:focus {
+  outline: none;
+}
+.label_back_to_login {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 140%;
+  color: #0085ff;
+  padding-top: 1.5rem;
+}
+.label_back_to_login > a {
+  text-decoration: none;
+}
+.label_back_to_login > a:hover {
+  text-decoration: underline;
+}
+/* meadia queries 0 up */
+@media (min-width: 0px) {
+}
+
+/* 320 up */
+@media (min-width: 320px) {
+}
+/* 480 up */
+@media (min-width: 480px) {
+}
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}
+
+/* Mobile devices 320 - 480 */
+@media screen and (min-width: 0px) and (max-width: 320px) {
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+}
+
+/* 481 - 768 Medium devices (tablets, 768px and up) iPads, Tablets*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .login_form_div {
+    width: 100%;
+  }
+  .input {
+    padding: 4px;
+    color: #fff;
+    width: 100%;
+    height: 1.5rem;
+    border-radius: 10px;
+    background: linear-gradient(123.64deg, rgba(255, 255, 255, 0) -22.38%, rgba(255, 255, 255, 0.039) 70.38%);
+    backdrop-filter: blur(21px);
+  }
+  .copyRightTextBox {
+    padding-top: 0rem;
+    margin-bottom: 0px;
+  }
+  .homeLeft p {
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+  .login_code_form_div {
+    width: 100%;
+  }
+}
+/* 769-1024 Small screens, laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .login_form_div {
+    width: 100%;
+  }
+  .input {
+    padding: 4px;
+    color: #fff;
+    width: 100%;
+    height: 2rem;
+    border-radius: 10px;
+    background: linear-gradient(123.64deg, rgba(255, 255, 255, 0) -22.38%, rgba(255, 255, 255, 0.039) 70.38%);
+    backdrop-filter: blur(21px);
+  }
+  .copyRightTextBox {
+    padding-top: 0.5rem;
+  }
+  .login_code_please_enter {
+    font-size: 1rem;
+  }
+}
+
+/* 1025 - 1200 Desktops, large screens */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+}
+
+/* 1201 - wadi */
+@media screen and (min-width: 1201px) {
+}
